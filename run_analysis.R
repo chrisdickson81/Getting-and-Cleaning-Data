@@ -31,14 +31,14 @@ testing <- cbind(testing,testingy)
 rm(testingy)
 rm(testingS)
 
+# Merge training and test sets together
+allData <- rbind(training, testing)
+
 # Read features and tidy feature names
 features <- read.csv("UCI HAR Dataset/features.txt", sep="", header=FALSE)
 features[,2] <- gsub('-mean', 'Mean', features[,2])
 features[,2] <- gsub('-std', 'Std', features[,2])
 features[,2] <- gsub('[-()]', '', features[,2])
-
-# Merge training and test sets together
-allData <- rbind(training, testing)
 
 # Add the column names (features) to allData 
 colnames(allData) <- c(features$V2, "Activity", "Subject")

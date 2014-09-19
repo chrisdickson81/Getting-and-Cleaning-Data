@@ -34,16 +34,13 @@ The subject identifiers `Subject` and activity labels `Activity` were also kept 
 Tidy data set contains the average of all filtered standard deviation and mean values from the raw dataset. Grouped by `Subject` and `ActivityName`.  
 
 #### Sample of renamed variables compared to original variable name
-For clarity on the affect of scripts described above.
+For clarity on the affect of scripts described above had on variable names as seen in the tidy dataset when compared to if they had been left untouched from the original raw features file.
 
  Raw data            | Tidy data 
  --------------------|--------------
- `subject`           | `subject`
- `label`             | `label`
  `tBodyAcc-mean()-X` | `tBodyAccMeanX`
  `tBodyAcc-mean()-Y` | `tBodyAccMeanY`
  `tBodyAcc-mean()-Z` | `tBodyAccMeanZ`
- `tBodyAcc-std()-X`  | `tBodyAccStdX`
- `tBodyAcc-std()-Y`  | `tBodyAccStdY`
- `tBodyAcc-std()-Z`  | `tBodyAccStdZ`
+
+
 

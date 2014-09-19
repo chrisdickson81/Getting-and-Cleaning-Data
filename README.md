@@ -2,7 +2,6 @@
 title: "README"
 author: "Chris Dickson"
 date: "Friday, September 19, 2014"
-output: html_document
 ---
 
 Once added as source to session simply run_analysis() to create the tidy output text file.

@@ -1,4 +1,6 @@
 
+run_analysis <- Function()
+{
 # Read in training main file
 training <- read.csv("UCI HAR Dataset/train/X_train.txt", sep="", header=FALSE)
 
@@ -67,3 +69,5 @@ droplist <- c("ActivityName", "Activity", "Subject")
 tidyData <- aggregate(allData[,!(names(allData) %in% droplist)], by=list(ActivityName = allData$ActivityName, Subject=allData$Subject), mean)
 
 write.table(tidyData, "tidy.txt", sep="\t",row.name=FALSE )
+
+}

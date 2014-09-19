@@ -11,7 +11,7 @@ Please see codebook for more details on transformations and calculations underta
 
 The analysis script breaks down into 5 main parts
 
-1. Loading the data into a data frame 
+1 Loading the data into a data frame 
 ```{r}
 # Read in training main file
 training <- read.csv("UCI HAR Dataset/train/X_train.txt", sep="", header=FALSE)
@@ -47,7 +47,7 @@ rm(testingS)
 allData <- rbind(training, testing)
 ```
 
-2. Loading the column headers and tidying them up according the R convention
+2 Loading the column headers and tidying them up according the R convention
 ```{r}
 # Read features and tidy feature names
 features <- read.csv("UCI HAR Dataset/features.txt", sep="", header=FALSE)
@@ -59,7 +59,7 @@ features[,2] <- gsub('[-()]', '', features[,2])
 colnames(allData) <- c(features$V2, "Activity", "Subject")
 ```
 
-3. Subsetting the dataset to only include the Mean and Standard Deviation
+3 Subsetting the dataset to only include the Mean and Standard Deviation
 ```{r}
 # Get only the data on mean and std. dev.
 colsWeWant <- colnames(allData)[grep(".*Mean.*|.*Std.*", colnames(allData))]
@@ -71,7 +71,7 @@ colsWeWant <- c(colsWeWant, "Activity", "Subject")
 allData <- allData[,colsWeWant]
 ```
 
-4. Bring in descriptive labels for the actvities
+4 Bring in descriptive labels for the actvities
 ```{r}
 #Get activity labels
 activityLabels <- read.csv("UCI HAR Dataset/activity_labels.txt", sep="", header=FALSE)
